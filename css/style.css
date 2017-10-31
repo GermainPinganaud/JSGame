@@ -1,0 +1,69 @@
+body {
+  background-color: black;
+  background-repeat: repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: sans-serif;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 20px;
+}
+section[data-state="victory"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+section[data-state="optionScreen"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+section[data-state="playScreen"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gameDiv {
+  height: 38px;
+  width: 38px;
+  background-image: url("../graphic/greybrick.png");
+  background-size: cover;
+}
+.gameContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+section input, button {
+  outline: none;
+  padding: 1vh;
+  margin-top: 2vh;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  width: 3em;
+  border: none;
+  color: white;
+  background-color: black;
+}
+section input:focus, button:focus {
+  outline: white 4px solid;
+}
+button {
+  width: 8em;
+}
+.gameScreen {
+  width: 70vw;
+  height: 70vh;
+  background-color: lightgrey;
+  background-repeat: repeat;
+}
+.hidden {
+  display: none!important;
+}
+.resetButton {
+  position: fixed;
+  top: 0;
+  left: 0;
+}

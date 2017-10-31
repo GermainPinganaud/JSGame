@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My game</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One|Press+Start+2P" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- Le bouton reset est fixé en haut a gauche
+    il va nous permettre de vider le localStorage
+    et donc, de debugger le bordel-->
+    <button class="resetButton" data-action="reset">Reset</button>
+
+    <!-- Cette section contient les options
+      elle s'affiche par défaut-->
+    <section data-state="optionScreen" class="gameScreen hidden">
+
+      <!-- Titres -->
+      <h2>Super mega unamed game</h2>
+      <h3>Settings</h3>
+
+      <!-- X -->
+      <div><label for="x">Nombre de cases sur l'axe "x"</label>
+      <input id="x" type="number" name="x" value="10" max="100"></div>
+
+      <!-- Y -->
+      <div><label for="y">Nombre de cases sur l'axe "y"</label>
+      <input id="y" type="number" name="y" value="10" max="100"></div>
+
+      <!-- StartGame -->
+      <button data-action="startGame" type="button" name="button">Start game</button>
+    </section> <!-- optionScreen -->
+
+    <!-- Cette section contient l'affichage du jeu
+    elle s'affiche que le joueur clique sur le bouton Start Game-->
+    <section data-state="playScreen" class="gameScreen hidden"></section>
+    <section data-state="victory" class="gameScreen hidden">Level complete !</section>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/js/script.js"></script>
+</html>
